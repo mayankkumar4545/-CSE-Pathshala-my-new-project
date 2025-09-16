@@ -1,0 +1,108 @@
+/* comparisonTable.css */
+.comp-bg-table {
+  background: linear-gradient(to right, #7986cb, #e8eaf6, #c5cae9);
+  margin: 15px;
+  border-radius: 50px;
+}
+
+.comparison-container {
+  padding: 64px 16px;
+}
+
+.comparison-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #5c6bc0;
+  margin-bottom: 48px;
+}
+
+.comparison-table {
+  border-radius: 15px;
+  overflow-x: auto;
+  box-shadow: 0 4px 20px #303f9f;
+  background-color: #ffffff;
+}
+
+.comparison-head-cell {
+  font-weight: 600;
+  padding: 16px;
+  background-color: #eef1f7;
+  color: #303f9f;
+  white-space: nowrap;
+}
+
+.comparison-feature-column {
+  min-width: 200px;
+}
+
+.comparison-cell {
+  padding: 16px;
+  font-weight: 500;
+  color: #5c6bc0;
+  background-color: #ffffff;
+  white-space: nowrap;
+}
+
+.comparison-row:nth-child(even) .comparison-cell {
+  background-color: #f9fafb;
+}
+
+.comparison-icon {
+  font-size: 1.5rem;
+}
+
+.comparison-icon.check {
+  color: #10b981;
+}
+
+.comparison-icon.cancel {
+  color: #ef4444;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .comparison-title {
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+  }
+
+  .comparison-container {
+    padding: 32px 16px;
+  }
+
+  .comparison-head-cell,
+  .comparison-cell {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .comparison-icon {
+    font-size: 1.2rem;
+  }
+
+  .comparison-feature-column {
+    min-width: 160px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comparison-title {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  .comparison-head-cell,
+  .comparison-cell {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .comparison-icon {
+    font-size: 1rem;
+  }
+
+  .comparison-feature-column {
+    min-width: 140px;
+  }
+}

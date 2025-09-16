@@ -1,0 +1,17 @@
+/* Medium devices (tablets, ≤768px) */
+@media screen and (max-width: 768px) {
+  .hero-btn-learn {
+    margin-left: 12px;
+  }
+}
+
+/* Small devices (phones, ≤480px) */
+@media screen and (max-width: 480px) {
+  .hero-btn-cls {
+    margin-bottom: 10px;
+  }
+
+  .hero-btn-learn {
+    margin: 15px;
+  }
+}
