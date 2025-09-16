@@ -1,0 +1,107 @@
+.hero-container {
+  background-color: #fffaf5;
+  padding-top: 50px;
+  padding-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-decorative-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #fed8b1;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.hero-main-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 4rem;
+}
+
+/* --- UPDATED FONT & GRADIENT STYLES --- */
+.hero-main-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #212529; /* Deep, near-black for sharpness */
+  letter-spacing: -1px; /* Tighter for a modern feel */
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title-gradient {
+  background: linear-gradient(
+    45deg,
+    #ff9a44,
+    #ff6c4a
+  ); /* Sharp orange gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #4b5563; /* Softer, professional gray */
+  max-width: 550px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+/* --- UPDATED BUTTON STYLE --- */
+.hero-cta-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #eee9e6;
+  background: linear-gradient(45deg, #ff6c4a, #ff9a44);
+  border: 2px solid #f97316;
+  padding: 0.7rem 2rem;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-cta-button:hover {
+  background-color: #f97316;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(249, 115, 22, 0.3);
+}
+
+.hero-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-stats-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .hero-main-title {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero-container {
+    padding-top: 80px;
+  }
+  .hero-main-content {
+    text-align: center;
+  }
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-main-title {
+    font-size: 2.4rem;
+  }
+}

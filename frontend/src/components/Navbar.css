@@ -1,0 +1,65 @@
+/* Main Navbar Container */
+.bright-nest-navbar {
+  background-color: #fffaf5; /* Consistent light, warm background */
+  padding: 1rem 0;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/* Logo Styling */
+.navbar-brand {
+  color: #212529 !important; /* Sharper, near-black color */
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.navbar-brand .bi {
+  color: #f97316; /* Sharp orange for the icon */
+}
+
+/* Navigation Links */
+.nav-link {
+  color: #4b5563 !important; /* Softer, professional gray */
+  font-weight: 500;
+  margin: 0 0.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #212529 !important; /* Active link is darker */
+}
+
+/* Underline for the ACTIVE link only */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 3px;
+  background-color: #f97316; /* Sharp orange underline */
+  border-radius: 2px;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: transparent !important;
+  color: #f97316 !important;
+  border: 2px solid #f97316 !important;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #f97316 !important;
+  color: white !important;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,234 @@
+.contact-form-section {
+  padding: 6rem 0; /* Standard padding for the section */
+  background-color: #f8f9fa; /* Light background */
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-form-header {
+  margin-bottom: 4rem;
+}
+
+.contact-form-header h1 {
+  font-size: 2.5rem; /* Matches image font size */
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-header p {
+  font-size: 1.05rem;
+  color: #6c757d;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* --- Office Details Card (Left Column) --- */
+.office-details-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  height: auto; /* Allow height to adjust to content */
+}
+
+.office-details-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.office-details-card p {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.8;
+  margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+.office-details-card p a {
+  color: #1e88e5; /* Link color */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* --- Inquiry Form Card (Right Column) --- */
+.inquiry-form-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.inquiry-form-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e0e0e0; /* Lighter border */
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #bdbdbd; /* Light gray placeholder text */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1); /* Lighter shadow on focus */
+}
+
+/* Radio Buttons Styling */
+.radio-group {
+  margin-bottom: 2rem;
+}
+
+.radio-group label {
+  /* Style for the main "What are you looking for" label */
+  margin-bottom: 1rem; /* More space below main label */
+}
+
+.radio-options {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 1.5rem; /* Space between radio options */
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #495057;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px; /* Space for custom radio button */
+}
+
+.radio-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Custom Radio Button appearance */
+.radio-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  border: 2px solid #bdbdbd; /* Gray border */
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked::before {
+  border-color: #1e88e5; /* Blue border when checked */
+  background-color: #1e88e5; /* Blue background when checked */
+}
+
+/* Inner dot for checked radio */
+.radio-label::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.radio-label input[type="radio"]:checked::after {
+  opacity: 1; /* Show inner dot when checked */
+}
+
+.send-inquiry-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e88e5; /* Blue button as in image */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-inquiry-btn:hover {
+  background-color: #1565c0; /* Darker blue on hover */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  .contact-form-section {
+    padding: 4rem 0;
+  }
+  .contact-form-header h1 {
+    font-size: 2rem;
+  }
+  .office-details-card,
+  .inquiry-form-card {
+    padding: 1.5rem;
+  }
+  .office-details-card:last-of-type {
+    /* Adjust spacing for second card on tablet */
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-form-header h1 {
+    font-size: 1.8rem;
+  }
+  .contact-form-header p {
+    font-size: 0.95rem;
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .send-inquiry-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  .radio-options {
+    flex-direction: column; /* Stack radio options vertically on very small screens */
+    gap: 0.75rem;
+  }
+}

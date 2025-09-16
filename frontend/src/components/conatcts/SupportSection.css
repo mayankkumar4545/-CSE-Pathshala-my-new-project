@@ -1,0 +1,118 @@
+.support-section {
+  padding: 6rem 0; /* Standard section padding */
+  background-color: #f8f9fa; /* Light background as in image */
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden; /* To contain the diagonal background elements */
+}
+
+/* Diagonal light blue background element (top right) */
+.support-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  background-color: #eaf1fa; /* Light blue color */
+  transform: skewY(-20deg); /* Diagonal slant */
+  transform-origin: top right;
+  z-index: 1;
+}
+
+/* Diagonal light blue background element (bottom left) */
+.support-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  background-color: #eaf1fa; /* Light blue color */
+  transform: skewY(-20deg); /* Diagonal slant */
+  transform-origin: bottom left;
+  z-index: 1;
+}
+
+.support-header {
+  margin-bottom: 4rem;
+  position: relative; /* To be above the diagonal elements */
+  z-index: 2;
+}
+
+.support-header h1 {
+  font-size: 2.5rem; /* Matches image font size */
+  font-weight: 600;
+  color: #343a40; /* Darker text */
+  margin-bottom: 0.5rem;
+}
+
+.support-header p {
+  font-size: 1.05rem;
+  color: #6c757d;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* --- Support Cards --- */
+.support-card {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04); /* Subtle shadow */
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* To be above the diagonal elements */
+  z-index: 2;
+}
+
+.support-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.support-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 12px; /* Slightly rounded rectangle as in image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3f2fd; /* Light blue background for icon */
+  color: #1e88e5; /* Main blue color for icon */
+  font-size: 1.8rem;
+}
+
+.support-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 0.75rem;
+}
+
+.support-card p {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .support-section {
+    padding: 4rem 0;
+  }
+  .support-header h1 {
+    font-size: 2rem;
+  }
+  .support-card {
+    padding: 2rem 1.5rem;
+  }
+  /* Make diagonal elements smaller or hide them on small screens */
+  .support-section::before,
+  .support-section::after {
+    width: 150px;
+    height: 120px;
+  }
+}

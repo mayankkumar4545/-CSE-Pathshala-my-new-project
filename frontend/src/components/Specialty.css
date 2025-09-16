@@ -1,0 +1,148 @@
+.specialty-section {
+  padding: 6rem 0;
+  background-color: #fffaf5;
+  overflow: hidden;
+}
+
+/* --- Header Styling --- */
+.specialty-title-container {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0; /* Hidden for animation */
+}
+
+.specialty-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f97316;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.specialty-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #212529;
+  letter-spacing: -1px;
+  max-width: 600px;
+  margin: 0.5rem auto 0 auto;
+}
+
+/* --- Dark Gradient Card Styling --- */
+.specialty-card-wrapper {
+  opacity: 0; /* Hidden for animation */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.specialty-card-wrapper:hover {
+  transform: translateY(-8px);
+}
+
+.specialty-card {
+  text-align: left;
+  padding: 2rem;
+  border-radius: 16px;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: background 0.4s ease;
+}
+
+.specialty-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.specialty-icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.specialty-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.specialty-card-text {
+  font-size: 0.95rem;
+  color: #a1a1aa; /* Softer gray for paragraph text */
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* NEW: Dark Gradient Card Backgrounds */
+.card-bg-yellow {
+  background: linear-gradient(135deg, #282218, #18150f);
+}
+.card-bg-pink {
+  background: linear-gradient(135deg, #301728, #1e0e19);
+}
+.card-bg-green {
+  background: linear-gradient(135deg, #172b23, #0e1a15);
+}
+.card-bg-blue {
+  background: linear-gradient(135deg, #1a2233, #111622);
+}
+
+/* NEW: Vibrant Icon Colors for Dark Backgrounds */
+.icon-color-yellow {
+  color: #f59e0b;
+}
+.icon-color-pink {
+  color: #ec4899;
+}
+.icon-color-green {
+  color: #10b981;
+}
+.icon-color-blue {
+  color: #3b82f6;
+}
+
+/* --- Scroll Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-header,
+.animate-card {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .specialty-card-wrapper {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .specialty-section {
+    padding: 4rem 0;
+  }
+  .specialty-title {
+    font-size: 2.5rem;
+  }
+  .specialty-card {
+    text-align: center;
+  }
+  .specialty-icon-circle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

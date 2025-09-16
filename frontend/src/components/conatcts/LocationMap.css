@@ -1,0 +1,14 @@
+.location-map-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa; /* Light background to match your theme */
+}
+
+.map-container {
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Important for the border-radius to apply to the iframe */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.map-container iframe {
+  display: block; /* Removes any extra space below the map */
+}

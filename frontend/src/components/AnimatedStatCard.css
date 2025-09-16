@@ -1,0 +1,52 @@
+.animated-stat-card-container {
+  width: 100%;
+}
+
+.animated-stat-card {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(45deg, #ff9a44, #ff6c4a);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  box-shadow: 0 8px 25px rgba(255, 108, 74, 0.4);
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.animated-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(255, 108, 74, 0.6);
+}
+
+.stat-icon-display {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.stat-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.9;
+}

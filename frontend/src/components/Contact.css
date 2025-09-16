@@ -1,0 +1,187 @@
+/* --- General Section Styling --- */
+.contact-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Section 1: Header --- */
+.contact-header-section {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-header-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.contact-header-section p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+/* --- Section 2: Feature Cards --- */
+.feature-card {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3f2fd;
+  color: #1e88e5;
+  font-size: 2rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+/* --- Section 3: Main Contact Area --- */
+.main-contact-section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.address-card,
+.form-card {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.address-card {
+  margin-bottom: 2rem;
+}
+
+.address-card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+.address-card p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.8;
+}
+
+.address-card p strong {
+  color: #343a40;
+}
+
+/* Form Styles */
+.form-card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+}
+
+.send-inquiry-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e88e5;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-inquiry-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Section 4: Map Section */
+.map-section iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+  .contact-header-section {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+  .contact-header-section h1 {
+    font-size: 2.5rem;
+  }
+  .main-contact-section {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-header-section h1 {
+    font-size: 2.2rem;
+  }
+  .contact-header-section p {
+    font-size: 1rem;
+  }
+  .address-card,
+  .form-card {
+    padding: 1.5rem;
+  }
+}
