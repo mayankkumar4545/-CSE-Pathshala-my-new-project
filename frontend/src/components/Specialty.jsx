@@ -1,5 +1,4 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
 import "./Specialty.css";
 
 const specialtyData = [
@@ -29,14 +28,10 @@ const specialtyData = [
   },
 ];
 
-const Card = ({ item, inView, index }) => {
+const Card = ({ item }) => {
   return (
-    <div
-      className={`col-lg-3 col-md-6 specialty-card-wrapper ${
-        inView ? "animate-card" : ""
-      }`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
+    // Animation classes and inline styles removed
+    <div className="col-lg-3 col-md-6 specialty-card-wrapper">
       <div className={`specialty-card card-bg-${item.color}`}>
         <div className={`specialty-icon-circle`}>
           <i className={`${item.icon} icon-color-${item.color}`}></i>
@@ -49,19 +44,13 @@ const Card = ({ item, inView, index }) => {
 };
 
 const Specialty = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
+  // useInView hook removed
   return (
-    <section className="specialty-section" ref={ref}>
+    // ref removed from section
+    <section className="specialty-section">
       <div className="container">
-        <div
-          className={`specialty-title-container ${
-            inView ? "animate-header" : ""
-          }`}
-        >
+        {/* Animation class removed */}
+        <div className="specialty-title-container">
           <h4 className="specialty-subtitle">Not Your Regular Classroom</h4>
           <h2 className="specialty-title">
             Why We’re Not Just Another Tech Stop?
@@ -69,7 +58,7 @@ const Specialty = () => {
         </div>
         <div className="row">
           {specialtyData.map((item, index) => (
-            <Card key={index} item={item} inView={inView} index={index} />
+            <Card key={index} item={item} />
           ))}
         </div>
       </div>

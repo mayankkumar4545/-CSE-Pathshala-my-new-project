@@ -11,10 +11,7 @@
   margin-bottom: 1rem;
 }
 
-/* --- Professional Image-Overlay Card Style --- */
-
 .popular-course-card {
-  /* CSS variables to hold mouse position */
   --mouse-x: 50%;
   --mouse-y: 50%;
 
@@ -25,12 +22,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.4s ease;
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.2);
+  transition: all 0.4s ease;
 }
 
 .popular-course-card:hover {
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 45px rgba(249, 115, 22, 0.3);
+  transform: translateY(-5px);
 }
 
 .popular-course-image {
@@ -48,7 +46,6 @@
   transform: scale(1.1);
 }
 
-/* Dark gradient overlay for text readability */
 .popular-course-card::after {
   content: "";
   position: absolute;
@@ -61,7 +58,6 @@
   z-index: 2;
 }
 
-/* --- NEW: Orange Spotlight Animation --- */
 .popular-course-card::before {
   content: "";
   position: absolute;
@@ -73,22 +69,21 @@
   background: radial-gradient(
     350px circle at var(--mouse-x) var(--mouse-y),
     rgba(255, 153, 0, 0.4),
-    /* The orange shine */ transparent 80%
+    transparent 80%
   );
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 3; /* Sits on top of the dark gradient */
+  z-index: 3;
 }
 
 .popular-course-card:hover::before {
-  opacity: 1; /* Show the spotlight on hover */
+  opacity: 1;
 }
 
-/* Body/text content sits on the top layer */
 .popular-course-body {
   padding: 1.5rem;
   position: relative;
-  z-index: 4; /* Sits on top of all effects */
+  z-index: 4;
 }
 
 .popular-course-title {
@@ -122,12 +117,11 @@
   font-size: 1rem;
 }
 
-/* --- (Animations and Header styles remain the same) --- */
-.course-card-wrapper,
-.popular-courses-header-container,
-.popular-header-divider {
-  opacity: 0;
+/* --- (Header animation styles remain) --- */
+.course-card-wrapper {
+  /* opacity: 0; THIS RULE HAS BEEN REMOVED */
 }
+
 .animate-slide-up {
   animation: slideUpAndFade 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
@@ -141,12 +135,19 @@
     transform: translateY(0);
   }
 }
+
+.popular-courses-header-container,
+.popular-header-divider {
+  opacity: 0;
+}
+
 .popular-courses-subtitle {
-  font-size: 1.5em;
+  font-size: 1rem;
   font-weight: 500;
   color: #f57c4a;
   margin: 0;
 }
+
 .popular-courses-main-title {
   font-size: 2.2rem;
   font-weight: 700;

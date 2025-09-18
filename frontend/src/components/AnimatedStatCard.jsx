@@ -40,7 +40,7 @@ const AnimatedStatCard = ({
   });
 
   return (
-    <div className="animated-stat-card-container" ref={cardRef}>
+    <div className="animated-stat-card-container mb-3" ref={cardRef}>
       <div className="animated-stat-card">
         {icon && <div className="stat-icon-display">{icon}</div>}
         <div className="stat-text-content">

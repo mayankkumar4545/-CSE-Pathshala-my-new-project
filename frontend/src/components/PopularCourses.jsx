@@ -42,12 +42,8 @@ const coursesData = [
 ];
 
 // Card component with MOUSE TRACKING re-added
-const AnimatedCourseCard = ({ course, index }) => {
-  const { ref: inViewRef, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
+// This component is now static, animation logic is removed
+const CourseCard = ({ course }) => {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -57,19 +53,12 @@ const AnimatedCourseCard = ({ course, index }) => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Pass the mouse coordinates to CSS variables
     card.style.setProperty("--mouse-x", `${x}px`);
     card.style.setProperty("--mouse-y", `${y}px`);
   };
 
   return (
-    <div
-      ref={inViewRef}
-      className={`col-lg-4 col-md-6 mb-4 course-card-wrapper ${
-        inView ? "animate-slide-up" : ""
-      }`}
-      style={{ animationDelay: `${index * 0.15}s` }}
-    >
+    <div className="col-lg-4 col-md-6 mb-4 course-card-wrapper">
       <div
         className="popular-course-card"
         ref={cardRef}
@@ -99,7 +88,7 @@ const AnimatedCourseCard = ({ course, index }) => {
   );
 };
 
-// Main component (no changes here)
+// Main component
 const PopularCourses = () => {
   const { ref: headerRef, inView: headerInView } = useInView({
     triggerOnce: true,
@@ -128,7 +117,7 @@ const PopularCourses = () => {
         />
         <div className="row">
           {coursesData.map((course, index) => (
-            <AnimatedCourseCard key={index} course={course} index={index} />
+            <CourseCard key={index} course={course} />
           ))}
         </div>
       </div>

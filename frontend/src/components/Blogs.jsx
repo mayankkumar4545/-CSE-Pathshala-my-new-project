@@ -14,7 +14,6 @@ const Blogs = () => {
       try {
         const response = await fetch(API_URL);
         const data = await response.json();
-        // This line shows only the 3 most recent blog posts
         setBlogs(data.slice(0, 3));
       } catch (error) {
         console.error("Failed to fetch blogs:", error);
@@ -30,6 +29,10 @@ const Blogs = () => {
       <div className="container">
         <div className="blogs-header">
           <h2 className="blogs-title">From the Blog</h2>
+          <p className="blogs-subtitle">
+            Explore our latest articles, insights, and stories from the tech
+            world.
+          </p>
         </div>
 
         <div className="row justify-content-center">
@@ -38,15 +41,14 @@ const Blogs = () => {
           ) : blogs.length > 0 ? (
             blogs.map((post) => <BlogCard key={post._id} post={post} />)
           ) : (
-            // This is shown if there are no posts in the database
             <p>No blog posts have been published yet. Check back soon!</p>
           )}
         </div>
 
-        <div className="text-center mt-4">
-          {/* This button correctly links to the /blogs page */}
+        <div className="text-center mt-5">
           <Link to="/blogs" className="btn view-all-btn">
-            View All Posts
+            {/* The button text is now wrapped in a <span> */}
+            <span>View All Posts</span>
           </Link>
         </div>
       </div>
